@@ -1168,7 +1168,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
             }).then(function (response) {}).catch(function (error) {
                 console.log(error);
             });
-            // console.log(e);
+            //console.log(e);
         }).listenForWhisper('typing', function (e) {
             if (e.name != '') {
                 _this4.typing = 'typing...';
@@ -1180,10 +1180,11 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
             _this4.numberOfUsers = users.length;
         }).joining(function (user) {
             _this4.numberOfUsers += 1;
-            _this4.$toaster.success(user.name + ' is joined the chat room');
+            // console.log(user);
+            _this4.$toaster.success(user.name + ' さんがチャットルームに参加しました');
         }).leaving(function (user) {
             _this4.numberOfUsers -= 1;
-            _this4.$toaster.warning(user.name + ' is leaved the chat room');
+            _this4.$toaster.warning(user.name + ' さんはチャットルームを離れました');
         });
     }
 });

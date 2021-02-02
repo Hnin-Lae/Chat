@@ -30,6 +30,8 @@
 				  </message>
               </ul>
               <input type="text" class="form-control" placeholder="ここにメッセージを記入..." v-model='message'  @keyup.enter='send'>
+              <br>
+              <a href="" class="btn btn-warning btn-sm" @click.prevent='deleteSession'>チャット削除</a>
             
 			</div>
 		</div>	

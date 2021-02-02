@@ -34,11 +34,14 @@ class ChatController extends Controller
     }
     public function saveToSession(request $request)
     {
-    	session()->put('chat',$request->message);
+    	session()->put('chat',$request->chat);
     }
     public function getOldMessage()
     {
     	return session('chat');
+    }
+    public function deleteSession(){
+    	session()->forget('chat');
     }
 
     
